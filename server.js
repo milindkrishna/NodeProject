@@ -1,8 +1,8 @@
+require('dotenv').config()
+
 const express = require('express')
 
 const app = express()
-
-const PORT = 3000;
 
 const API = {
     
@@ -46,6 +46,6 @@ app.get('/soumili',(req,res) => {
     res.json(API)
 })
 
-app.listen(PORT, (req,res) => {
-    console.log(`Server is listening to port ${PORT}`)
+app.listen(process.env.PORT, (req,res) => {
+    console.log(`Server is listening to port ${process.env.PORT}`)
 })
